@@ -1,0 +1,40 @@
+# VERSION:      0.1
+# DESCRIPTION:    Create a Puppet master/agent 
+# AUTHOR:     http://container-solutions.com/2015/06/puppet-in-docker/
+# COMMENTS:
+# This file describes how to build a puppet master/agent
+# which demonstrates building Artifactory with Puppet.
+#
+# USAGE:
+# 
+# # Build images
+# docker-compose build
+# 
+# # Run containers
+# docker-compose up
+# 
+# # exec into postgres container
+# docker exec -it artifactory_postgresql_1 /bin/bash
+# 
+# # Run in the node
+# puppet agent -t
+
+puppet:
+  build: puppetmaster/
+  hostname: puppet
+  volumes:
+    - puppet/manifests:/etc/puppet/manifests
+    - puppet/modules/artifactory:/etc/puppet/modules/artifactory
+postgresql:
+  image: containersol/puppetslave
+  hostname: postgresql
+  privileged: true
+  links:
+    - puppet:puppet
+artifactory:
+  build: puppetslave/
+  hostname: artifactory
+  privileged: true
+  links:
+    - puppet:puppet
+    - postgresql:postgresql
