@@ -1,6 +1,6 @@
-# VERSION:		  0.1
+# VERSION:		    0.1
 # DESCRIPTION:	  Run StarWars inside a container
-# AUTHOR:		  http://container-solutions.com/2015/06/puppet-in-docker/
+# AUTHOR:		      Sion Williams
 # USAGE:
 # 
 # # Build images
