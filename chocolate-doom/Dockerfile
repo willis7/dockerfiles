@@ -4,7 +4,7 @@
 #
 #	docker run -it doom
 
-FROM debian:jessie
+FROM debian:bullseye
 MAINTAINER Sion Williams <sion5@hotmail.co.uk>
 
 # Install dependencie
