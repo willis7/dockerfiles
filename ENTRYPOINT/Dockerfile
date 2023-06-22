@@ -1,4 +1,4 @@
-FROM ubuntu:14.10
+FROM ubuntu:22.04
 
 RUN apt-get -y install cowsay
 ENTRYPOINT ["/usr/games/cowsay"]
