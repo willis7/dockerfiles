@@ -6,7 +6,7 @@
 #
 
 # Base docker image
-FROM centos:7
+FROM centos:8
 MAINTAINER Sion Williams <sion5@hotmail.co.uk>
 
 RUN rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
