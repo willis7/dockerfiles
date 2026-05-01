@@ -10,7 +10,7 @@
 # docker run -it starwars
 # 
 
-FROM ubuntu:14.10
+FROM ubuntu:26.04
 
 RUN apt-get -y install telnet
 CMD ["/usr/bin/telnet", "towel.blinkenlights.nl"]
