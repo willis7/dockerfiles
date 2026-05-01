@@ -1,4 +1,4 @@
-FROM ubuntu:14.10
+FROM ubuntu:26.04
 
 RUN apt-get -y install cowsay
 RUN apt-get -y install fortune
